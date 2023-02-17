@@ -19,6 +19,9 @@ app.get('/blogs', (req, res) => {
 app.get('/terms', (req, res) => {
   res.render('terms.ejs')
 })
+app.get('*', (req, res) => {
+  res.render('fournotfour.ejs')
+})
 
 app.listen(port, () => {
   console.log(`singhexplains app listening on port http://localhost:${port}`)
