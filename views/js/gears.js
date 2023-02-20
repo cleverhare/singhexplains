@@ -58,9 +58,28 @@ const toggleSearchBar = function () {
 }
 
 addEventOnElem(searchTogglers, "click", toggleSearchBar);
-//change the copyright year according to the year 
-// let date = new Date()
-// let year = date.getFullYear()
-// let copyright = document.querySelector('.copyright')
-// copyright.innerHTML = `
-// &copy; SinghExplains ${year}. Published by <a href="https://www.youtube.com/@SinghinUSA" target="_blank" class="copyright-link hover:underline">SinghInUsa</a>.`
+// change the copyright year according to the year 
+let date = new Date()
+let year = date.getFullYear()
+let copyright = document.querySelector('.copyright')
+copyright.innerHTML = `
+&copy; SinghExplains ${year}. Published by <a href="https://www.youtube.com/@SinghinUSA" target="_blank" class="copyright-link hover:underline">SinghInUsa</a>.`
+
+// Redirect indians to somewhere and others to somewhere else 
+const func = async ()=>{
+  const request = await fetch("https://ipinfo.io/json?token=48fb69c09c1a3e");
+  const jsonResponse = await request.json();
+  console.log(jsonResponse.ip, jsonResponse.country);
+  let buy = document.querySelector('.buy')
+  buy.addEventListener("click", ()=>{
+    if (jsonResponse.country == "IN") {
+      window.location.replace("https://github.com/cleverhare")
+    }
+    else{ 
+      window.location.replace("https://github.com/iharnoor")
+  
+    }
+
+  })
+}
+func()
