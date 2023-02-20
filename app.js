@@ -19,6 +19,9 @@ app.get('/blogs', (req, res) => {
 app.get('/terms', (req, res) => {
   res.render('terms.ejs')
 })
+app.get('/gears', (req, res) => {
+  res.render('gears.ejs')
+})
 app.get('*', (req, res) => {
   res.render('fournotfour.ejs')
 })
