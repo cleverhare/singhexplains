@@ -68,7 +68,7 @@ copyright.innerHTML = `
 // Redirect indians to somewhere and others to somewhere else 
 const func = async ()=>{
   const request = await fetch("https://ipinfo.io/json?token=48fb69c09c1a3e");
-  const jsonResponse = await request.json();
+  const jsonResponse = await request.json()
   console.log(jsonResponse.ip, jsonResponse.country);
   let buy = document.querySelector('.buy')
   buy.addEventListener("click", ()=>{

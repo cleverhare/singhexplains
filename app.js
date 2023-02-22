@@ -22,6 +22,9 @@ app.get('/terms', (req, res) => {
 app.get('/gears', (req, res) => {
   res.render('gears.ejs')
 })
+app.get('/admin', (req, res) => {
+  res.render('admin.ejs')
+})
 app.get('*', (req, res) => {
   res.render('fournotfour.ejs')
 })
