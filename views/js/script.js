@@ -63,3 +63,4 @@ let year = date.getFullYear()
 let copyright = document.querySelector('.copyright')
 copyright.innerHTML = `
 &copy; SinghExplains ${year}. Published by <a href="https://www.youtube.com/@SinghinUSA" target="_blank" class="copyright-link hover:underline">SinghInUsa</a>.`
+

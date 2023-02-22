@@ -25,6 +25,9 @@ app.get('/gears', (req, res) => {
 app.get('/admin', (req, res) => {
   res.render('admin.ejs')
 })
+app.get('/admin/content', (req, res) => {
+  res.render('addcontent.ejs')
+})
 app.get('*', (req, res) => {
   res.render('fournotfour.ejs')
 })

@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="../views/css/admin.css">
-    
-  <link rel="shortcut icon" href="../views/images/SinghExplains.ico" type="image/svg+xml">
-     
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    <title>Admin Dashboard Panel</title> 
+    <title>Add content to SinghExplains</title>
     <script type="module">
         const func = async ()=>{
   const request = await fetch("https://ipinfo.io/json?token=48fb69c09c1a3e");
@@ -83,6 +73,15 @@
 }
 func()
     </script>
+    <link rel="stylesheet" href="../views/css/addcontent.css">
+    <link rel="stylesheet" href="../views/css/admin.css">
+    <link rel="shortcut icon" href="../views/images/SinghExplains.ico" type="image/svg+xml">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 </head>
 <body>
     <nav class="nav">
@@ -100,7 +99,7 @@ func()
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a></li>
-                <li><a href="/admin/content">
+                <li><a href="#">
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Content</span>
                 </a></li>
@@ -141,7 +140,6 @@ func()
             </ul>
         </div>
     </nav>
-
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
@@ -153,72 +151,34 @@ func()
             
             <!--<img src="images/profile.jpg" alt="">-->
         </div>
+        <div class="main">
+            <div class="wrapper">
+                <header>Write a New content for SinghExplains</header>
+                <form action="#">
+                  <div class="dbl-field">
+                    <div class="field">
+                      <input type="text" name="name" placeholder="Enter your Blog Title">
+                      <i class='fas fa-book'></i>
+                    </div>
+                  </div>
+                  <div class="dbl-field">
 
-        <div class="dash-content">
-            <div class="overview">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text dashtext">Dashboard</span>
-                </div>
-
-                <div class="boxes">
-                    <div class="box box1">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total Likes</span>
-                        <span class="number">50,120</span>
+                    <div class="field">
+                      <input type="text" name="website" placeholder="Paste your Image Link">
+                      <i class='fas fa-globe'></i>
                     </div>
-                    <div class="box box2">
-                        <i class="uil uil-user"></i>
-                        <span class="text">Total Traffic</span>
-                        <span class="number">20,120</span>
-                    </div>
-                    <div class="box box3">
-                        <i class="uil uil-share"></i>
-                        <span class="text">Total Articles</span>
-                        <span class="number">10,120</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="activity">
-                <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Joiners of Newsletter</span>
-                </div>
-
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">premshahi@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">prakashhai@gmail.com</span>
-                        <span class="data-list">manishachand@gmail.com</span>
-                        <span class="data-list">pratimashhai@gmail.com</span>
-                        <span class="data-list">manshahi@gmail.com</span>
-                        <span class="data-list">ganeshchand@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
-                    </div>
-                </div>
-            </div>
+                  </div>
+                  <div class="message">
+                    <textarea placeholder="Write/Paste your Article" name="message"></textarea>
+                    <i class="material-icons">message</i>
+                  </div>
+                  <div class="button-area">
+                    <button  type="submit">Publish Article</button>
+                    <span></span>
+                  </div>
+                </form>
+              </div>
+            
         </div>
     </section>
     <script src="../views/js/admin.js"></script>
