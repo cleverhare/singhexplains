@@ -17,8 +17,12 @@ modeToggle.addEventListener("click", () =>{
     body.classList.toggle("dark");
     if(body.classList.contains("dark")){
         localStorage.setItem("mode", "dark");
+        let singhlogo = document.querySelector('.singhlogo')
+        singhlogo.style.filter = "invert(1)"
     }else{
         localStorage.setItem("mode", "light");
+        let singhlogo = document.querySelector('.singhlogo')
+        singhlogo.style.filter = "invert(0)"
     }
 });
 
